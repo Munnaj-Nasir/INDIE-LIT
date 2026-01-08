@@ -1,0 +1,184 @@
+/* General Service Page Styles */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+.red-line {
+    width: 45px;
+    height: 3px;
+    background-color: #ff6a00;
+    margin-bottom: 20px;
+}
+
+/* Overview Section */
+.service-overview {
+    padding: 100px 0;
+}
+
+.overview-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.overview-media img {
+    width: 100%;
+    border-radius: 30px;
+}
+
+.overview-text h2 {
+    font-size: 36px;
+    color: #102a43;
+    margin-bottom: 20px;
+}
+
+/* Detail Section (The 01. Section) */
+.service-detail-feature {
+    padding-bottom: 120px;
+}
+
+.detail-flex {
+    display: flex;
+    gap: 80px;
+    align-items: center;
+}
+
+.detail-image img {
+    flex: 1;
+    max-width: 500px;
+    border-radius: 30px;
+}
+
+.detail-content {
+    flex: 1.2;
+}
+
+.title-row {
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+}
+
+.detail-number {
+    font-size: 52px;
+    font-weight: 700;
+    color: #ff6a00;
+    line-height: 1;
+}
+
+.title-text h2 {
+    font-size: 32px;
+    color: #102a43;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.title-text p {
+    color: #486581;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.detail-cta {
+    color: #ff6a00;
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .overview-grid, .detail-flex {
+        grid-template-columns: 1fr;
+        flex-direction: column;
+        text-align: center;
+    }
+    .red-line { margin: 0 auto 20px; }
+    .title-row { flex-direction: column; align-items: center; }
+}
+
+.sets-us-apart {
+    padding: 100px 0;
+    background-color: #ffffff;
+}
+
+.apart-flex {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+.apart-content {
+    flex: 1.5;
+}
+
+.apart-content h2 {
+    font-size: 36px;
+    color: #102a43;
+    margin-bottom: 50px;
+    font-weight: 700;
+}
+
+/* Feature List Styling */
+.feature-list {
+    border-top: 1px solid #e1e8ed; /* Initial top divider */
+}
+
+.feature-item {
+    display: flex;
+    padding: 35px 0;
+    border-bottom: 1px solid #e1e8ed; /* Dividers between items */
+    gap: 30px;
+}
+
+.feature-label {
+    flex: 1;
+}
+
+.feature-label h3 {
+    font-size: 20px;
+    color: #102a43;
+    font-weight: 600;
+    margin: 0;
+}
+
+.feature-desc {
+    flex: 2;
+}
+
+.feature-desc p {
+    font-size: 16px;
+    color: #486581;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Image Side */
+.apart-media {
+    flex: 1;
+}
+
+.apart-media img {
+    width: 100%;
+    border-radius: 30px; /* Matching the brand's rounded look */
+    display: block;
+    object-fit: cover;
+}
+
+/* Responsive Logic */
+@media (max-width: 992px) {
+    .apart-flex {
+        flex-direction: column;
+    }
+    
+    .feature-item {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .apart-content h2 {
+        text-align: center;
+    }
+}

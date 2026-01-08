@@ -1,0 +1,213 @@
+:root {
+    --brand-orange: #ff6a00;
+    --navy-dark: #102a43;
+    --border-light: #e1e8ed;
+    --text-muted: #486581;
+
+
+}
+
+.industrial-shop {
+    padding: 60px 50px;
+    background-color: #ffffff;
+}
+
+.shop-wrapper {
+    display: flex;
+    gap: 40px;
+}
+
+/* Sidebar Filters */
+.shop-sidebar {
+    width: 280px;
+    flex-shrink: 0;
+}
+
+.filter-header h3 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: var(--navy-dark);
+}
+
+.filter-group {
+    margin-bottom: 30px;
+    border-bottom: 1px solid var(--border-light);
+    padding-bottom: 20px;
+}
+
+.filter-group h4 {
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.filter-group ul { list-style: none; padding: 0; }
+.filter-group li { margin-bottom: 10px; }
+.filter-group a { text-decoration: none; color: var(--text-muted); font-size: 14px; }
+.filter-group a.active { color: #000; font-weight: 700; }
+
+.price-inputs { display: flex; align-items: center; gap: 5px; }
+.price-inputs input { width: 80px; padding: 5px; border: 1px solid var(--border-light); }
+
+/* Main Grid Area */
+.shop-content { flex-grow: 1; }
+
+.shop-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.industrial-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.item-card {
+    border: 1px solid transparent;
+    transition: 0.3s;
+    padding: 10px;
+}
+
+.item-card:hover {
+    border-color: var(--border-light);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.item-img {
+    background-color: #f7f7f7;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.item-img img { max-width: 90%; max-height: 90%; }
+
+.brand-tag {
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--brand-orange);
+    letter-spacing: 1px;
+}
+
+.item-info h3 {
+    font-size: 15px;
+    color: var(--navy-dark);
+    margin: 8px 0;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.add-cart {
+    width: 100%;
+    padding: 12px;
+    background: #000;
+    color: #fff;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.add-cart:hover { background: var(--brand-orange); }
+
+/* Mobile Responsive */
+@media (max-width: 992px) {
+    .shop-wrapper { flex-direction: column; }
+    .industrial-grid { grid-template-columns: repeat(2, 1fr); }
+    .shop-sidebar { width: 100%; }
+}
+
+.item-img {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f9f9f9; /* Light grey to make white-background images "pop" */
+    overflow: hidden;
+    padding: 20px;
+}
+
+.item-img img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Keeps the tool proportions perfect */
+    mix-blend-mode: multiply; /* Removes white background from image if needed */
+}
+
+/* Sidebar Quote Box */
+.quote-status-card {
+    background: #102a43;
+    color: white;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 4px;
+}
+
+.btn-view-quote {
+    display: block;
+    background: #ff6a00;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+/* Navbar Badge */
+.cart-link {
+    position: relative;
+    font-size: 1.4rem;
+    color: #102a43;
+    margin-right: 20px;
+}
+
+#cart-count-badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: #ff6a00;
+    color: white;
+    font-size: 11px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* Button Added State */
+.btn-added {
+    background-color: #27ae60 !important;
+}
+
+/* Category Filter Buttons */
+.filter-btn {
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    padding: 10px 0;
+    cursor: pointer;
+    font-size: 15px;
+    color: #666;
+    transition: 0.2s;
+}
+
+.filter-btn.active, .filter-btn:hover {
+    color: #ff6a00;
+    font-weight: bold;
+}
