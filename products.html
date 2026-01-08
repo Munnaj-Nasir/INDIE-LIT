@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INDIE LIT | Professional Construction Supplies</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/Product.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-header">
+                <div class="logo">
+                    <a href="index.html" style="text-decoration: none; color: inherit;">
+                        <span class="logo-bold">INDIE</span> <span class="logo-thin">LIT</span></a>
+                </div>
+                <button class="nav-toggle" aria-controls="nav-menu" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+                </button>
+            </div>
+
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutUs.html">About</a></li>
+                    <li><a href="Products.html" class="active">Products</a></li>
+                    <li><a href="Cart.html">Products</a></li>
+                </ul>
+
+                <a href="Contact.html" class="btn-contact">CONTACT <i class="arrow-right"></i></a>
+            </div>
+        </div>
+        </div>
+    </nav>
+
+    <section class="industrial-shop">
+        <div class="container shop-wrapper">
+
+            <aside class="shop-sidebar">
+                <div class="filter-header">
+                    <h3>Product Filters</h3>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Product Categories</h4>
+                    <ul class="filter-links">
+                        <li><button class="filter-btn active" data-filter="all">All Products</button></li>
+                        <li><button class="filter-btn" data-filter="Power Tools">Power Tools</button></li>
+                        <li><button class="filter-btn" data-filter="Safety Gear">Safety Gear</button></li>
+                        <li><button class="filter-btn" data-filter="Timber & Blocks">Timber & Blocks</button></li>
+                        <li><button class="filter-btn" data-filter="Security & Hardware">Security & Hardware</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="quote-status-card">
+                    <h4>Your Project Quote</h4>
+                    <p>Subtotal: <span id="side-cart-subtotal">£0.00</span></p>
+                    <a href="Cart.html" class="btn-view-quote">View Quote</a>
+                </div>
+            </aside>
+
+            <main class="shop-content">
+                <div class="shop-header">
+                    <span class="results-count">Showing <span id="visible-count">10</span> Premium Products</span>
+                    <div class="view-controls">
+                        <select class="sort-dropdown">
+                            <option>Sort by: Newest</option>
+                            <option>Price: Low to High</option>
+                            <option>Price: High to Low</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="industrial-grid" id="product-grid">
+
+    <div class="item-card" data-category="Power Tools">
+        <div class="item-img"><img src="assets/images/original-637633367015173876.webp" alt="Drill"></div>
+        <div class="item-info">
+            <span class="brand-tag">AXT PRO</span>
+            <h3>Brushless Hammer Drill Kit</h3>
+            <p class="price">£489.00</p>
+            <button class="add-cart" data-id="tool-01" data-title="Brushless Hammer Drill Kit" data-price="489.00" data-image="assets/images/original-637633367015173876.webp">ADD TO QUOTE</button>
+        </div>
+    </div>
+
+    <div class="item-card" data-category="Power Tools">
+        <div class="item-img"><img src="assets/images/bosch-gks190-saw.webp" alt="Circular Saw"></div>
+        <div class="item-info">
+            <span class="brand-tag">AXT PRO</span>
+            <h3>Precision Circular Saw 190mm</h3>
+            <p class="price">£545.00</p>
+            <button class="add-cart" data-id="tool-02" data-title="Precision Circular Saw 190mm" data-price="545.00" data-image="assets/images/bosch-gks190-saw.webp">ADD TO QUOTE</button>
+        </div>
+    </div>
+
+    <div class="item-card" data-category="Power Tools">
+        <div class="item-img"><img src="assets/images/Bosch_Cordless_Angle_Grinder_GWS_180-LI_125MM.webp" alt="Grinder"></div>
+        <div class="item-info">
+            <span class="brand-tag">AXT PRO</span>
+            <h3>Cordless Angle Grinder 125mm</h3>
+            <p class="price">£295.00</p>
+            <button class="add-cart" data-id="tool-03" data-title="Cordless Angle Grinder" data-price="295.00" data-image="assets/images/Bosch_Cordless_Angle_Grinder_GWS_180-LI_125MM.webp">ADD TO QUOTE</button>
+        </div>
+    </div>
+
+    <div class="item-card" data-category="Power Tools">
+        <div class="item-img"><img src="assets/images/820882d_ef94.webp" alt="Impact Driver"></div>
+        <div class="item-info">
+            <span class="brand-tag">AXT PRO</span>
+            <h3>High-Torque Impact Driver</h3>
+            <p class="price">£245.00</p>
+            <button class="add-cart" data-id="tool-04" data-title="High-Torque Impact Driver" data-price="245.00" data-image="assets/images/820882d_ef94.webp">ADD TO QUOTE</button>
+        </div>
+    </div>
+
+    <div class="item-card" data-category="Power Tools">
+        <div class="item-img"><img src="assets/images/61ynckpZiZL.jpg" alt="Multi Tool"></div>
+        <div class="item-info">
+            <span class="brand-tag">AXT PRO</span>
+            <h3>Cordless Multi-Cutter Tool</h3>
+            <p class="price">£189.00</p>
+            <button class="add-cart" data-id="tool-05" data-title="Cordless Multi-Cutter Tool" data-price="189.00" data-image="assets/images/61ynckpZiZL.jpg">ADD TO QUOTE</button>
+        </div>
+    </div>
+
+    <div class="item-card" data-category="Power Tools">
+        <div class="item-img"><img src="assets/images/51bnDXEanbL._AC_SL1000_.jpg" alt="Jigsaw"></div>
+        <div class="item-info">
+            <span class="brand-tag">AXT PRO</span>
+            <h3>Professional Orbital Jigsaw</h3>
+            <p class="price">£215.00</p>
+            <button class="add-cart" data-id="tool-06" data-title="Professional Orbital Jigsaw" data-price="215.00" data-image="assets/images/51bnDXEanbL._AC_SL1000_.jpg">ADD TO QUOTE</button>
+        </div>
+    </div>
+
+    <div class="item-card" data-category="Power Tools">
+        <div class="item-img"><img src="assets/images/Imex_LX3DR_Multi-line_laser_Red_Beam_3_x_360_Lines_Laser_Level_Multi_Beam_Laser-009_600x600.jpg" alt="Laser Level"></div>
+        <div class="item-info">
+            <span class="brand-tag">AXT PRO</span>
+            <h3>360° Green Beam Laser Level</h3>
+            <p class="price">£375.00</p>
+            <button class="add-cart" data-id="tool-07" data-title="360 Green Beam Laser" data-price="375.00" data-image="assets/images/Imex_LX3DR_Multi-line_laser_Red_Beam_3_x_360_Lines_Laser_Level_Multi_Beam_Laser-009_600x600.jpg">ADD TO QUOTE</button>
+        </div>
+    </div>
+
+    <div class="item-card" data-category="Power Tools">
+        <div class="item-img"><img src="assets/images/SkorpioIII_Random-orbital-palm-pneumatic-sander_150mm-pad_RH353_RH356_RH359.jpg" alt="Sander"></div>
+        <div class="item-info">
+            <span class="brand-tag">AXT PRO</span>
+            <h3>Random Orbit Palm Sander</h3>
+            <p class="price">£120.00</p>
+            <button class="add-cart" data-id="tool-08" data-title="Random Orbit Palm Sander" data-price="120.00" data-image="assets/images/SkorpioIII_Random-orbital-palm-pneumatic-sander_150mm-pad_RH353_RH356_RH359.jpg">ADD TO QUOTE</button>
+        </div>
+    </div>
+
+    <div class="item-card" data-category="Power Tools">
+        <div class="item-img"><img src="assets/images/ade9e190daab15e212e7241cca47ba3f.jpg_720x720q80.jpg" alt="Heat Gun"></div>
+        <div class="item-info">
+            <span class="brand-tag">AXT PRO</span>
+            <h3>Digital Industrial Heat Gun</h3>
+            <p class="price">£95.00</p>
+            <button class="add-cart" data-id="tool-09" data-title="Digital Industrial Heat Gun" data-price="95.00" data-image="assets/images/ade9e190daab15e212e7241cca47ba3f.jpg_720x720q80.jpg">ADD TO QUOTE</button>
+        </div>
+    </div>
+
+    <div class="item-card" data-category="Power Tools">
+        <div class="item-img"><img src="assets/images/Ecomm_Large-DCS367P1_1__98630.jpg" alt="Recip Saw"></div>
+        <div class="item-info">
+            <span class="brand-tag">AXT PRO</span>
+            <h3>Compact Reciprocating Saw</h3>
+            <p class="price">£198.00</p>
+            <button class="add-cart" data-id="tool-10" data-title="Compact Reciprocating Saw" data-price="198.00" data-image="assets/images/Ecomm_Large-DCS367P1_1__98630.jpg">ADD TO QUOTE</button>
+        </div>
+    </div>
+
+    <div class="item-card" data-category="Power Tools">
+        <div class="item-img"><img src="assets/images/PTDW625EK1_1.jpg" alt="Router"></div>
+        <div class="item-info">
+            <span class="brand-tag">AXT PRO</span>
+            <h3>½" Electronic Plunge Router</h3>
+            <p class="price">£310.00</p>
+            <button class="add-cart" data-id="tool-11" data-title="Electronic Plunge Router" data-price="310.00" data-image="assets/images/PTDW625EK1_1.jpg">ADD TO QUOTE</button>
+        </div>
+    </div>
+
+    <div class="item-card" data-category="Power Tools">
+        <div class="item-img"><img src="assets/images/bosch_gbl18v_120.webp" alt="Blower"></div>
+        <div class="item-info">
+            <span class="brand-tag">AXT PRO</span>
+            <h3>18V Site Clearance Blower</h3>
+            <p class="price">£85.00</p>
+            <button class="add-cart" data-id="tool-12" data-title="18V Site Blower" data-price="85.00" data-image="assets/images/bosch_gbl18v_120.webp">ADD TO QUOTE</button>
+        </div>
+    </div>
+
+    <div class="item-card" data-category="Power Tools">
+        <div class="item-img"><img src="assets/images/51nyhxmDvjL._AC_SL1000_.jpg" alt="LED Light"></div>
+        <div class="item-info">
+            <span class="brand-tag">AXT PRO</span>
+            <h3>5000 Lumens LED Work Light</h3>
+            <p class="price">£145.00</p>
+            <button class="add-cart" data-id="tool-13" data-title="5000 Lumens Work Light" data-price="145.00" data-image="assets/images/51nyhxmDvjL._AC_SL1000_.jpg">ADD TO QUOTE</button>
+        </div>
+    </div>
+
+    <div class="item-card" data-category="Power Tools">
+        <div class="item-img"><img src="assets/images/1915H4-0___L.jpg" alt="Battery"></div>
+        <div class="item-info">
+            <span class="brand-tag">AXT PRO</span>
+            <h3>High-Capacity 18V 9.0Ah Battery Pack</h3>
+            <p class="price">£155.00</p>
+            <button class="add-cart" data-id="tool-14" data-title="18V 9.0Ah Battery" data-price="155.00" data-image="assets/images/1915H4-0___L.jpg">ADD TO QUOTE</button>
+        </div>
+    </div>
+
+    <div class="item-card" data-category="Power Tools">
+        <div class="item-img"><img src="assets/images/digifunk-work-site-radio-usb-rechargeable-dab-dab-fm-bluetooth-aux-input-ip65-waterproof~7427297059208_01c_MP.webp" alt="Radio"></div>
+        <div class="item-info">
+            <span class="brand-tag">AXT PRO</span>
+            <h3>Industrial DAB+ Site Radio & Charger</h3>
+            <p class="price">£195.00</p>
+            <button class="add-cart" data-id="tool-15" data-title="DAB+ Site Radio" data-price="195.00" data-image="assets/images/digifunk-work-site-radio-usb-rechargeable-dab-dab-fm-bluetooth-aux-input-ip65-waterproof~7427297059208_01c_MP.webp">ADD TO QUOTE</button>
+        </div>
+    </div>
+
+    <div class="item-card" data-category="Power Tools">
+        <div class="item-img"><img src="assets/images/dcn692-1a.webp" alt="Nail Gun"></div>
+        <div class="item-info">
+            <span class="brand-tag">AXT PRO</span>
+            <h3>18V Brushless 1st Fix Nailer</h3>
+            <p class="price">£465.00</p>
+            <button class="add-cart" data-id="tool-16" data-title="18V 1st Fix Nailer" data-price="465.00" data-image="assets/images/dcn692-1a.webp">ADD TO QUOTE</button>
+        </div>
+    </div>
+
+    <div class="item-card" data-category="Safety Gear">
+        <div class="item-img"><img src="assets/images/71X76Egx5sL._AC_SX679.webp" alt="Hi-Vis Vest"></div>
+        <div class="item-info">
+            <span class="brand-tag">SAFETY FIRST</span>
+            <h3>Executive Hi-Vis Safety Vest</h3>
+            <p class="price">£12.99</p>
+            <button class="add-cart" data-id="safe-01" data-title="Executive Hi-Vis Vest" data-price="12.99" data-image="assets/images/safety-vest-yellow.webp">ADD TO QUOTE</button>
+        </div>
+    </div>
+
+    <div class="item-card" data-category="Safety Gear">
+        <div class="item-img"><img src="assets/images/79318fb6-4764-43a9-865f-f94eadf2f37c.59a2e5eec97e9a06692d92c1f2f0972d.webp" alt="Gloves"></div>
+        <div class="item-info">
+            <span class="brand-tag">SAFETY FIRST</span>
+            <h3>Heavy-Duty Impact Work Gloves</h3>
+            <p class="price">£18.50</p>
+            <button class="add-cart" data-id="safe-02" data-title="Impact Work Gloves" data-price="18.50" data-image="assets/images/work-gloves-impact.webp">ADD TO QUOTE</button>
+        </div>
+    </div>
+
+    <div class="item-card" data-category="Safety Gear">
+        <div class="item-img"><img src="assets/images/safety-goggles-clear-lens-wide-vision-anti-fog-protective-anti-chemical-splash-eye-protection-500x500.webp" alt="Goggles"></div>
+        <div class="item-info">
+            <span class="brand-tag">SAFETY FIRST</span>
+            <h3>Anti-Fog Wide Vision Goggles</h3>
+            <p class="price">£15.00</p>
+            <button class="add-cart" data-id="safe-03" data-title="Anti-Fog Goggles" data-price="15.00" data-image="assets/images/safety-goggles-pro.webp">ADD TO QUOTE</button>
+        </div>
+    </div>
+
+    <div class="item-card" data-category="Safety Gear">
+        <div class="item-img"><img src="assets/images/81XOEFnzuJL._AC_UF1000,1000_QL80_.jpg" alt="Helmet"></div>
+        <div class="item-info">
+            <span class="brand-tag">SAFETY FIRST</span>
+            <h3>Carbon Fiber Safety Helmet</h3>
+            <p class="price">£125.00</p>
+            <button class="add-cart" data-id="safe-04" data-title="Carbon Fiber Safety Helmet" data-price="125.00" data-image="assets/images/LFTHDF50C19HCleft.webp">ADD TO QUOTE</button>
+        </div>
+    </div>
+
+    <div class="item-card" data-category="Safety Gear">
+        <div class="item-img"><img src="assets/images/TITANIUMHONEY.webp" alt="Boots"></div>
+        <div class="item-info">
+            <span class="brand-tag">SAFETY FIRST</span>
+            <h3>Titanium Toe Work Boots</h3>
+            <p class="price">£210.00</p>
+            <button class="add-cart" data-id="safe-05" data-title="Titanium Toe Work Boots" data-price="210.00" data-image="assets/images/TITANIUMHONEY.webp">ADD TO QUOTE</button>
+        </div>
+    </div>
+
+    <div class="item-card" data-category="Safety Gear">
+        <div class="item-img"><img src="assets/images/U221FBH.jpg" alt="Harness"></div>
+        <div class="item-info">
+            <span class="brand-tag">SAFETY FIRST</span>
+            <h3>Full Body Fall Arrest Harness</h3>
+            <p class="price">£165.00</p>
+            <button class="add-cart" data-id="safe-06" data-title="Full Body Harness" data-price="165.00" data-image="assets/images/U221FBH.jpg">ADD TO QUOTE</button>
+        </div>
+    </div>
+
+    <div class="item-card" data-category="Security & Hardware">
+        <div class="item-img"><img src="assets/images/50121-3MYale.webp" alt="Rim Latch"></div>
+        <div class="item-info">
+            <span class="brand-tag">SECURE-LINK</span>
+            <h3>Heavy-Duty Industrial Rim Latch</h3>
+            <p class="price">£85.00</p>
+            <button class="add-cart" data-id="sec-01" data-title="Industrial Rim Latch" data-price="85.00" data-image="assets/images/50121-3MYale.webp">ADD TO QUOTE</button>
+        </div>
+    </div>
+
+    <div class="item-card" data-category="Security & Hardware">
+        <div class="item-img"><img src="assets/images/FDH13SZSSSPK3.jpg" alt="Grade 13 Hinge"></div>
+        <div class="item-info">
+            <span class="brand-tag">SECURE-LINK</span>
+            <h3>Grade 13 Fire-Rated Hinges</h3>
+            <p class="price">£28.00</p>
+            <button class="add-cart" data-id="sec-02" data-title="Grade 13 Fire Hinges" data-price="28.00" data-image="assets/images/FDH13SZSSSPK3.jpg">ADD TO QUOTE</button>
+        </div>
+    </div>
+
+    <div class="item-card" data-category="Security & Hardware">
+        <div class="item-img"><img src="assets/images/Round-Face-Bullet-Lock-504x504.jpg" alt="Shutter Lock"></div>
+        <div class="item-info">
+            <span class="brand-tag">SECURE-LINK</span>
+            <h3>Armoured Roller Shutter Bullet Lock</h3>
+            <p class="price">£115.00</p>
+            <button class="add-cart" data-id="sec-03" data-title="Shutter Bullet Lock" data-price="115.00" data-image="assets/images/Round-Face-Bullet-Lock-504x504.jpg">ADD TO QUOTE</button>
+        </div>
+    </div>
+
+    <div class="item-card" data-category="Timber & Blocks">
+        <div class="item-img"><img src="assets/images/tas-oak-DAR-9x9.webp" alt="Oak"></div>
+        <div class="item-info">
+            <span class="brand-tag">BUILD-WELL</span>
+            <h3>Grade A Oak Structural Blocks</h3>
+            <p class="price">£85.00</p>
+            <button class="add-cart" data-id="wood-01" data-title="Grade A Oak Structural Blocks" data-price="85.00" data-image="assets/images/tas-oak-DAR-9x9.webp">ADD TO QUOTE</button>
+        </div>
+    </div>
+
+</div>
+
+
+                </div>
+            </main>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h2 class="logo-footer">INDIE <span>LIT</span></h2>
+                <div class="footer-links-group">
+                    <h4>Discover</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="ServiceOne.html">Products</a></li>
+
+                        <li><a href="Contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-middle">
+                <p>Connect with our technical team for custom product sourcing.</p>
+            </div>
+            <div class="footer-actions">
+                <a href="Contact.html" class="btn-outline">Contact INDIE LIT</a>
+                <a href="ServiceOne.html" class="btn-dark">Browse Products</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container bottom-flex">
+                <p>Terms of Use | Privacy Policy</p>
+                <p>&copy; 2026 INDIE LIT</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/nav.js"></script>
+    <script src="js/Cart.js"></script>
+    <script src="js/Product.js"></script>
+    <script src="js/filter.js"></script>
+    <script src="js/Productprocess.js"></script>
+</body>
+
+</html>
