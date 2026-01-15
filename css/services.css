@@ -1,0 +1,263 @@
+.services-detail {
+    padding: 100px 5%;
+    background-color: #fff;
+}
+
+.service-row {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    margin-bottom: 120px;
+}
+
+/* Alternating Layout */
+.service-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.service-image {
+    flex: 1;
+}
+
+.service-image img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 24px;
+    /* Matches rounded corners in reference */
+    display: block;
+}
+
+.service-text {
+    flex: 1;
+    position: relative;
+}
+
+/* Numbered Accent */
+.service-number {
+    font-size: 56px;
+    font-weight: 700;
+    color: #ff6a00;
+    /* Matches the light red/orange in reference */
+    position: absolute;
+    left: -80px;
+    top: -10px;
+    opacity: 0.8;
+}
+
+.service-text h2 {
+    font-size: 32px;
+    color: #1a2b3c;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.service-text p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.service-link {
+    font-size: 16px;
+    color: #ff6a00;
+    text-decoration: underline;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.service-link:hover {
+    color: #ff3333;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 992px) {
+
+    .service-row,
+    .service-row.reverse {
+        flex-direction: column;
+        gap: 40px;
+        text-align: center;
+        margin-bottom: 80px;
+    }
+
+    .service-number {
+        position: static;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .service-image img {
+        height: 300px;
+    }
+}
+
+/* Container for consistent side margins */
+.container {
+    max-width: 1200px;
+    /* Limits width on big screens */
+    margin: 0 auto;
+    /* Centers the content */
+    padding: 0 5%;
+    /* Provides the side margin on smaller screens */
+}
+
+.services-section {
+    padding: 100px 0;
+    background-color: #ffffff;
+}
+
+.service-row {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    /* Space between image and text */
+    margin-bottom: 150px;
+    /* Space between different service blocks */
+}
+
+.service-row.row-reverse {
+    flex-direction: row-reverse;
+}
+
+.service-media {
+    flex: 1;
+}
+
+.service-media img {
+    width: 100%;
+    border-radius: 40px;
+    display: block;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.service-info {
+    flex: 1;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    /* Exact spacing for the number */
+    align-items: start;
+}
+
+.info-number {
+    font-size: 48px;
+    font-weight: 600;
+    color: #ff6a00;
+    /* Pink-red accent */
+    line-height: 1;
+}
+
+.info-text h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #102a43;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.info-text p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #486581;
+    margin-bottom: 25px;
+}
+
+.info-cta {
+    color: #ff6a00;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 992px) {
+
+    .service-row,
+    .service-row.row-reverse {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.work-process {
+    padding: 10px 0;
+    background-color: #fff;
+}
+
+.process-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+/* The tiny red line above the title */
+.header-accent {
+    width: 40px;
+    height: 3px;
+    background-color: #ff6a00;
+    margin: 0 auto 15px;
+}
+
+.process-header h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #102a43;
+    letter-spacing: 1px;
+}
+
+/* 2x2 Grid Layout */
+.process-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.process-card {
+    background-color: #ffffff;
+    border: 1px solid #e1e8ed;
+    /* Light grey border from image */
+    border-radius: 20px;
+    /* Soft rounded corners */
+    padding: 50px 40px;
+    transition: all 0.3s ease;
+}
+
+.process-card:hover {
+    border-color: #ff6a00;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.process-card h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #102a43;
+    margin-bottom: 20px;
+}
+
+.process-card p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #486581;
+    margin: 0;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .process-card {
+        padding: 40px 30px;
+    }
+}

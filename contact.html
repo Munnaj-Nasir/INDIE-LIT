@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Trade Support</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/aboutUs.css">
+    <style>
+        :root {
+            --primary-color: #007bff; /* Equivalent to Global Color 0 */
+            --bg-light: #f8f9fa;    /* Equivalent to Global Color 4 */
+            --text-dark: #333;
+            --border-color: #e0e0e0;
+            --border-radius: 20px;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: var(--bg-light);
+            padding: 120px 40px 80px;
+            display: grid;
+            grid-template-columns: 1fr 32%;
+            gap: 80px;
+            align-items: start;
+        }
+
+        .hero-text h1 {
+            font-size: 3rem;
+            margin-top: 20px;
+        }
+
+        .separator {
+            width: 64px;
+            height: 4px;
+            background-color: var(--primary-color);
+            margin-bottom: 14px;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+            border-radius: var(--border-radius);
+            margin-bottom: -180px; /* Overlap effect */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        /* Contact Info Grid */
+        .contact-section {
+            padding: 180px 40px 100px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .info-card {
+            border: 1px solid var(--border-color);
+            padding: 40px;
+            border-radius: var(--border-radius);
+        }
+
+        .info-card p:first-child {
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        .info-card h3 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+
+        /* Social Icons */
+        .social-icons {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+            padding: 0;
+        }
+
+        .social-icons a {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover { color: #0056b3; }
+
+        /* Form Section */
+        .form-container {
+            grid-column: span 2;
+            background-color: var(--bg-light);
+            padding: 60px;
+            border-radius: var(--border-radius);
+            margin-top: 60px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .form-container h2 { margin-top: 0; }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        input, textarea {
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        button {
+            padding: 15px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        /* Map Section */
+        .map-container iframe {
+            width: 100%;
+            height: 500px;
+            border: 0;
+            display: block;
+        }
+
+        /* Responsiveness */
+        @media (max-width: 768px) {
+            .hero, .contact-section, .form-container {
+                grid-template-columns: 1fr;
+                padding: 40px 20px;
+            }
+            .hero-image img { margin-bottom: 0; height: 300px; }
+            .form-container { grid-column: span 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-header">
+                <div class="logo">
+                    <span class="logo-bold">INDIE</span> <span class="logo-thin">LIT</span>
+                </div>
+                    <div class="logo">
+                        <a href="index.html" style="text-decoration: none; color: inherit;">
+                        <span class="logo-bold">INDIE</span> <span class="logo-thin">LIT</span></a>
+                    </div>
+
+                <button class="nav-toggle" aria-controls="nav-menu" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutUs.html">About</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <a href="contact.html" class="btn-contact">CONTACT <i class="arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="about-hero">
+        <div class="container">
+            <h1><strong>Contact Us</strong></h1>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="info-card">
+            <p>Phone</p>
+            <h3>07344209050</h3>
+        </div>
+        <div class="info-card">
+            <p>Email</p>
+            <h3>info@indielitltd.com</h3>
+        </div>
+        <div class="info-card">
+            <p>Address</p>
+            <h3>129 New City Road, London, England, E13 9PX</h3>
+        </div>
+
+
+    </section>
+
+    <section class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.022941577977!2d0.01974127718915152!3d51.53112347181816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a7919864e43d%3A0x600c439f029a70e7!2s129%20New%20City%20Rd%2C%20London%20E13%209PX%2C%20UK!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+
+     <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h2 class="logo-footer">INDIE <span>LIT</span></h2>
+                <div class="footer-links-group">
+                    <h4>Discover</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-middle">
+                <p>Connect with our trade team</p>
+            </div>
+
+            <div class="footer-actions">
+                <a href="contact.html" class="btn-outline">Contact INDIE LIT</a>
+                <a href="products.html" class="btn-dark">Browse Products</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container bottom-flex">
+                <p>Terms of Use | Privacy Policy</p>
+                <p>&copy; 2026 INDIE LIT</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you! Your message has been sent. (This is a demo)');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

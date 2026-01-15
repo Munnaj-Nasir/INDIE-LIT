@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INDIE LIT</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* Internal styles for a quick, clean setup */
+        .thank-you-body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #ffffff;
+            margin: 0;
+            font-family: sans-serif;
+            text-align: center;
+        }
+        .content-box {
+            max-width: 400px;
+            padding: 20px;
+        }
+        .logo-box {
+            font-weight: 800;
+            font-size: 24px;
+            letter-spacing: 2px;
+            margin-bottom: 40px;
+            color: #102a43;
+        }
+        .logo-box span { font-weight: 300; }
+        h1 {
+            font-size: 2rem;
+            color: #102a43;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #627d98;
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+        .btn-exit {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #102a43;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+        .btn-exit:hover {
+            background: #ff6a00;
+        }
+    </style>
+</head>
+
+<body > 
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-header">
+                <div class="logo">
+                    <a href="index.html" style="text-decoration: none; color: inherit;">
+                    <span class="logo-bold">INDIE</span> <span class="logo-thin">LIT</span></a>
+                </div>
+
+                <button class="nav-toggle" aria-controls="nav-menu" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutUs.html">About</a></li>
+                    <li><a href="Products.html">Products</a></li>
+                    <li><a href="Cart.html">Products</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <a href="Contact.html" class="btn-contact">CONTACT <i class="arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+<div class="thank-you-body">
+    <div class="content-box">
+        <div class="logo-box">INDIE <span>LIT</span></div>
+        <h1>Thank You.</h1>
+        <p>Your quote request has been received. Our trade team will respond promptly.</p>
+        <a href="index.html" class="btn-exit">Return to Home</a>
+    </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h2 class="logo-footer">INDIE <span>LIT</span></h2>
+                <div class="footer-links-group">
+                    <h4>Discover</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="Products.html">Products</a></li>
+
+                        <li><a href="Contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-middle">
+                <p>Connect with our trade team</p>
+            </div>
+
+            <div class="footer-actions">
+                <a href="Contact.html" class="btn-outline">Contact INDIE LIT</a>
+                <a href="Products.html" class="btn-dark">Browse Products</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container bottom-flex">
+                <p>Terms of Use | Privacy Policy</p>
+                <p>&copy; 2026 INDIE LIT</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/nav.js"></script>
+    <script src="js/numberCounting.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/story.js"></script>
+    <script src="js/ctaForm.js"></script>
+    <script src="js/Product.js"></script>
+</body>
+
+</html>

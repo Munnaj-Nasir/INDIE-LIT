@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INDIE LIT</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/CartPage.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-header">
+                <div class="logo">
+                    <a href="index.html" style="text-decoration: none; color: inherit;">
+                    <span class="logo-bold">INDIE</span> <span class="logo-thin">LIT</span></a>
+                </div>
+
+                <button class="nav-toggle" aria-controls="nav-menu" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutUs.html">About</a></li>
+                    <li><a href="products.html">Products</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <a href="contact.html" class="btn-contact">CONTACT <i class="arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <!-- Start Hero Section -->
+    <div class="small-hero" style="margin-bottom: 50px;">
+        <h1>Your Quote</h1>
+    </div>
+    <!-- End Hero Section -->
+
+    <div class="cart-container" id="cart-container"></div>
+
+    <div class="cart-totals">
+        <h4>Quote Totals</h4>
+        <div class="d-flex justify-content-between sub-width">
+            <span>Subtotal:</span>
+            <span id="cart-subtotal">£0.00</span>
+        </div>
+        <div class="mt-3">
+            <button class="btn-checkout" onclick="proceedToCheckout()">Request Quote</button>
+        </div>
+    </div>
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h2 class="logo-footer">INDIE <span>LIT</span></h2>
+                <div class="footer-links-group">
+                    <h4>Discover</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-middle">
+                <p>Connect with our team</p>
+            </div>
+
+            <div class="footer-actions">
+                <a href="contact.html" class="btn-outline">Contact INDIE LIT</a>
+                <a href="products.html" class="btn-dark">Shop Product</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container bottom-flex">
+                <p>Terms of Use | Privacy Policy</p>
+                <p>&copy; 2026 INDIE LIT</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/cart.js"></script>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.getElementById('cart-container');
+            const subtotalEl = document.getElementById('cart-subtotal');
+            const gbp = new Intl.NumberFormat('en-GB', { style: 'currency', currency: 'GBP' });
+
+            function render() {
+                const cart = Cart.get();
+                container.innerHTML = '';
+
+                if (cart.length === 0) {
+                    container.innerHTML = '<p>Your quote is empty.</p>';
+                } else {
+                    cart.forEach(item => {
+                        const row = document.createElement('div');
+                        row.className = 'cart-item';
+                        row.innerHTML = `
+          <img src="${item.image}" alt="${escapeHtml(item.title)}">
+          <div class="cart-info">
+            <h3 style="margin:0;font-size:18px;">${escapeHtml(item.title)}</h3>
+            <p style="margin:5px 0;color:#666;">${gbp.format(item.price)} each</p>
+          </div>
+
+          <div class="qty-controls" data-id="${item.id}">
+            <button class="qty-btn minus" aria-label="Decrease quantity">−</button>
+            <input class="qty-input" type="number" min="0" step="1" value="${item.quantity}">
+            <button class="qty-btn plus" aria-label="Increase quantity">+</button>
+          </div>
+
+          <div class="line-total">${gbp.format(item.price * item.quantity)}</div>
+        `;
+                        container.appendChild(row);
+                    });
+                }
+
+                subtotalEl.textContent = gbp.format(Cart.subtotal());
+            }
+
+            // + / − buttons
+            container.addEventListener('click', (e) => {
+                const btn = e.target.closest('.qty-btn');
+                if (!btn) return;
+                const id = btn.parentElement.dataset.id;
+                if (btn.classList.contains('plus')) Cart.inc(id);
+                else Cart.dec(id);
+                render();
+            });
+
+            // Direct quantity entry
+            container.addEventListener('change', (e) => {
+                const input = e.target.closest('.qty-input');
+                if (!input) return;
+                const id = input.parentElement.dataset.id;
+                let qty = parseInt(input.value, 10);
+                if (isNaN(qty) || qty < 0) qty = 0;
+                Cart.setQty(id, qty);
+                render();
+            });
+
+            window.proceedToCheckout = function () {
+                const cart = Cart.get();
+                if (cart.length === 0) {
+                    alert('Your cart is empty!');
+                    return;
+                }
+                localStorage.setItem('checkoutCart', JSON.stringify(cart));
+                window.location.href = 'checkout.html';
+            };
+
+            function escapeHtml(s) {
+                return s.replace(/[&<>"']/g, m => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' }[m]));
+            }
+
+            render();
+        });
+    </script>
+
+</body>
+
+</html>
